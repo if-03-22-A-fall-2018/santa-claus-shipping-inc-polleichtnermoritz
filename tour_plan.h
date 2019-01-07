@@ -43,4 +43,4 @@ void plan_delete(TourPlan *plan);
  */
 int plan_calc_presents(double goodness);
 
-#endif //SANTACLAUS_TOURPLAN_H
+#endif

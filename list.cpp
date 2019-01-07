@@ -6,6 +6,7 @@ struct _node
     void* _data;
     struct _node* _next;
 };
+
 struct _list
 {
   struct _node* _head;
@@ -24,6 +25,7 @@ void list_delete(List *list)
 {
   free(list);
 }
+
 void list_add(List *list, void *data)
 {
   struct _node* newNode =(Node*) malloc(sizeof(struct _node));
@@ -37,9 +39,10 @@ void list_add(List *list, void *data)
       list -> _head = newNode;
   }
 }
+
 void list_insert_after(Node *node, void *data)
 {
- struct _node* newNode =(Node*) malloc(sizeof(struct _node));
+  struct _node* newNode =(Node*) malloc(sizeof(struct _node));
 
   node->_next = newNode;
   newNode->_data = data;
